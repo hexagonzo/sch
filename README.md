@@ -29,7 +29,12 @@ Only card plays seen by this client's `CardModel.OnPlayWrapper` are recorded. Co
 
 ## Build + install (Windows)
 
-Install the .NET 9 SDK. Close the game. In PowerShell, at the repository root:
+Install the .NET 9 SDK. 
+
+```powershell
+winget install --id Microsoft.DotNet.SDK.9 --exact
+```
+Close the game. In PowerShell, at the repository root (make sure you have the right dir for the game):
 
 ```powershell
 .\scripts\build.ps1 -GameDir "D:\SteamLibrary\steamapps\common\Slay the Spire 2"
