@@ -1,4 +1,4 @@
-# sch (Slay the Spire 2)
+# sch (simple card history)
 
 A small, Hearthstone-inspired sidebar that lists recently played cards in the current combat. **Early-access source preview — not game-tested.** No gameplay modifications.
 
