@@ -1,0 +1,12 @@
+C:\Users\root\Downloads\sch\bin\Release\net9.0\sch.deps.json
+C:\Users\root\Downloads\sch\bin\Release\net9.0\sch.dll
+C:\Users\root\Downloads\sch\bin\Release\net9.0\sch.pdb
+C:\Users\root\Downloads\sch\obj\Release\net9.0\sch.csproj.AssemblyReference.cache
+C:\Users\root\Downloads\sch\obj\Release\net9.0\sch.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\root\Downloads\sch\obj\Release\net9.0\sch.AssemblyInfoInputs.cache
+C:\Users\root\Downloads\sch\obj\Release\net9.0\sch.AssemblyInfo.cs
+C:\Users\root\Downloads\sch\obj\Release\net9.0\sch.csproj.CoreCompileInputs.cache
+C:\Users\root\Downloads\sch\obj\Release\net9.0\sch.dll
+C:\Users\root\Downloads\sch\obj\Release\net9.0\refint\sch.dll
+C:\Users\root\Downloads\sch\obj\Release\net9.0\sch.pdb
+C:\Users\root\Downloads\sch\obj\Release\net9.0\ref\sch.dll

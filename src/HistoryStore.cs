@@ -1,22 +1,31 @@
 using System;
 using System.Collections.Generic;
+using Godot;
 
 namespace sch;
 
+// Only render locally observed card-play events; no network messages and no game-state changes.
+internal sealed record HistoryEntry(string CardName, string PlayerId, string PlayerName, string ClassName, bool IsLocal, Color ClassColor);
+
 internal static class HistoryStore
 {
-    private static readonly List<string> Items = new(64);
+    private static readonly List<HistoryEntry> Items = new(250);
     internal static int Version { get; private set; }
-    internal static IReadOnlyList<string> Entries => Items;
+    internal static IReadOnlyList<HistoryEntry> Entries => Items;
 
-    internal static void Add(string name)
+    internal static void Add(HistoryEntry entry)
     {
-        if (string.IsNullOrWhiteSpace(name)) return;
-        if (name.Length > 90) name = name[..90] + "…";
-        Items.Add(name);
-        // The buffer must be bounded even when UI isn't visible.
-        if (Items.Count > 100) Items.RemoveRange(0, Items.Count - 100);
+        if (string.IsNullOrWhiteSpace(entry.CardName)) return;
+        Items.Add(entry);
+        int limit = ModEntry.Config.HistoryLimit;
+        if (Items.Count > limit) Items.RemoveRange(0, Items.Count - limit);
         Version++;
+    }
+
+    internal static void TrimToLimit()
+    {
+        int overflow = Items.Count - ModEntry.Config.HistoryLimit;
+        if (overflow > 0) { Items.RemoveRange(0, overflow); Version++; }
     }
 
     internal static void Clear() { Items.Clear(); Version++; }
