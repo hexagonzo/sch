@@ -2,6 +2,10 @@
 
 A lightweight, configurable Hearthstone-inspired sidebar. The existing **v0.2.1 working overlay bootstrap is preserved**, with multiplayer-aware owner attribution.
 
+<img width="251" height="924" alt="sts2" src="https://github.com/user-attachments/assets/781146e5-f47e-4e0d-b440-212f6137a622" />
+<img width="1486" height="766" alt="sts1" src="https://github.com/user-attachments/assets/ef476249-ce65-49cd-87d0-87fd367ee8c8" />
+
+
 ## New in v0.3.2
 
 - **Scrollable card history**: fixed-height list, mouse-wheel scrolling, newest first. The title bar remains draggable.
